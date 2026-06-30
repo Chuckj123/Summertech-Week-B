@@ -6,6 +6,7 @@ import java.util.Random;
 public class Numguessgame{
     public static void main(String[]args){
         int guess1 = 1;
+        int guess2 = 10-guess1;
         Random random = new Random ();
         Scanner scan = new Scanner(System.in);
         int x = random.nextInt(1,101);
@@ -18,11 +19,11 @@ public class Numguessgame{
                 break;
             }
             else if (guess > x ){
-                System.out.println("Your guess is higher than the number.");
+                System.out.println("Your guess is higher than the number.You have " + (10-guess1) + " guesses left");
                 guess1+=1;
             }
             else{
-                System.out.println("Your guess is lower than the number.");
+                System.out.println("Your guess is lower than the number. You have " + (10-guess1) + " guesses left");
                 guess1 +=1;
             }
             if(guess1==11){

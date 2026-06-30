@@ -1,1 +1,1 @@
-next
+System.out.println("");
