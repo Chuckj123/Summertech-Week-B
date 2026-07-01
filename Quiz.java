@@ -22,6 +22,6 @@ public class Quiz {
             System.out.println("you got it incorrect");
         }
         System.out.println("Your score is " + score + "/2");
-
+        
     }
 }
