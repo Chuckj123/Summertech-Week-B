@@ -10,17 +10,11 @@ public class Tictactoe {
                 board[r][c] = '_';
             }
         }
-        
-    
+
         char turn = 'X';
         while (true) {
             boolean tie = true;
-            for (int i = 0; i <= 2; i++) {
-                for (int x = 0; x <= 2; x++) {
-                    System.out.print(board[i][x] + " ");
-                }
-                System.out.println(" ");
-            }
+            Tictactoe.printBoard(board);
             System.out.println("player " + turn + " turn");
             System.out.print("What row?: ");
             int row = scan.nextInt();
@@ -28,230 +22,230 @@ public class Tictactoe {
             int column = scan.nextInt();
             row = row - 1;
             column = column - 1;
-            if(row >2 || column>2||row<0||column<0){
+            if (row > 2 || column > 2 || row < 0 || column < 0) {
                 System.out.println("Your thing is out fo bounds try somtheing else");
             }
-            
+
             else {
                 if (board[row][column] == 'X' || board[row][column] == 'O') {
                     System.out.println("choose a different place");
-                }
-                else {
+                } else {
                     board[row][column] = turn;
                     if (turn == 'X') {
                         turn = 'O';
-                    }
-                    else {
+                    } else {
                         turn = 'X';
                     }
                 }
             }
-            
-            
-            //horizontal
-            if(board[0][0] == 'X' && board[0][1] == 'X'&& board[0][2] == 'X'){
+
+            // horizontal
+            if (board[0][0] == 'X' && board[0][1] == 'X' && board[0][2] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-            //horizontal 
-            if(board[1][0] == 'X' && board[1][1] == 'X'&& board[1][2] == 'X'){
+            // horizontal
+            if (board[1][0] == 'X' && board[1][1] == 'X' && board[1][2] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-            //horizontal
-            if(board[2][0] == 'X' && board[2][1] == 'X'&& board[2][2] == 'X'){
+            // horizontal
+            if (board[2][0] == 'X' && board[2][1] == 'X' && board[2][2] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-            //vertical 
-            if(board[0][1] == 'X' && board[1][1] == 'X'&& board[2][1] == 'X'){
+            // vertical
+            if (board[0][1] == 'X' && board[1][1] == 'X' && board[2][1] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-            if(board[0][0] == 'X' && board[2][0] == 'X'&& board[1][0] == 'X'){
+            if (board[0][0] == 'X' && board[2][0] == 'X' && board[1][0] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-            if(board[0][2] == 'X' && board[2][2] == 'X'&& board[1][2] == 'X'){
+            if (board[0][2] == 'X' && board[2][2] == 'X' && board[1][2] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-            //diagonal 
-            if(board[0][0] == 'X' && board[1][1] == 'X'&& board[2][2] == 'X'){
+            // diagonal
+            if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-            if(board[0][2] == 'X' && board[1][1] == 'X'&& board[2][0] == 'X'){
+            if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X') {
                 System.out.println("Player X wins");
-                for(int i=0; i<=2; i++){
-                    for(int x = 0; x<=2; x++){
-                        System.out.print(board[i][x]+" ");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
                     }
                     System.out.println(" ");
                 }
                 break;
             }
-                    //horizontal
-        if(board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
+            // horizontal
+            if (board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == 'O') {
+                System.out.println("Player O wins");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
                 }
-                System.out.println(" ");
+                break;
             }
-            break;
-        }
 
-        //horizontal
-        if(board[1][0] == 'O' && board[1][1] == 'O' && board[1][2] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
+            // horizontal
+            if (board[1][0] == 'O' && board[1][1] == 'O' && board[1][2] == 'O') {
+                System.out.println("Player O wins");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
                 }
-                System.out.println(" ");
+                break;
             }
-            break;
-        }
 
-        //horizontal
-        if(board[2][0] == 'O' && board[2][1] == 'O' && board[2][2] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
+            // horizontal
+            if (board[2][0] == 'O' && board[2][1] == 'O' && board[2][2] == 'O') {
+                System.out.println("Player O wins");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
                 }
-                System.out.println(" ");
+                break;
             }
-            break;
-        }
 
-        //vertical
-        if(board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
+            // vertical
+            if (board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == 'O') {
+                System.out.println("Player O wins");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
                 }
-                System.out.println(" ");
+                break;
             }
-            break;
-        }
 
-        if(board[0][0] == 'O' && board[2][0] == 'O' && board[1][0] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
+            if (board[0][0] == 'O' && board[2][0] == 'O' && board[1][0] == 'O') {
+                System.out.println("Player O wins");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
                 }
-                System.out.println(" ");
+                break;
             }
-            break;
-        }
 
-        if(board[0][2] == 'O' && board[2][2] == 'O' && board[1][2] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
+            if (board[0][2] == 'O' && board[2][2] == 'O' && board[1][2] == 'O') {
+                System.out.println("Player O wins");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
                 }
-                System.out.println(" ");
+                break;
             }
-            break;
-        }
 
-        //diagonal
-        if(board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
+            // diagonal
+            if (board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O') {
+                System.out.println("Player O wins");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
                 }
-                System.out.println(" ");
+                break;
             }
-            break;
-        }
 
-        if(board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O'){
-            System.out.println("Player O wins");
-            for(int i=0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-                    System.out.print(board[i][x]+" ");
-                  System.out.println(" ");
-            }
-            break;
-        }     
-        }
-         for(int x = 0; x<=2; x++){
-            
-            for(int y = 0; y<= 2; y++){
-              if(board[x][y]== '_'){
-                tie = false;
-              }
+            if (board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O') {
+                System.out.println("Player O wins");
 
+                break;
             }
-        }
-        if(tie == true)
-        {
-            System.out.println("it's a tie!");
-            for(int i = 0; i<=2; i++){
-                for(int x = 0; x<=2; x++){
-System.out.print(board[i][x]+ " ");
+        
+            for (int x = 0; x <= 2; x++) {
+
+                for (int y = 0; y <= 2; y++) {
+                    if (board[x][y] == '_') {
+                        tie = false;
+                    }
+
                 }
-                System.out.println(" ");
-                
             }
+            if (tie == true) {
+                System.out.println("it's a tie!");
+                for (int i = 0; i <= 2; i++) {
+                    for (int x = 0; x <= 2; x++) {
+                        System.out.print(board[i][x] + " ");
+                    }
+                    System.out.println(" ");
 
-            break;
-            
-        }          
-            
+                }
+
+                break;
+
+            } 
         }
 
     }
 
-}
+    public static void printBoard(char[][] board) {
+        for (int i = 0; i <= 2; i++) {
+            for (int x = 0; x <= 2; x++) {
+                System.out.print(board[i][x] + " ");
 
+            }
+            System.out.println(" ");
+        }
+    }
+
+}

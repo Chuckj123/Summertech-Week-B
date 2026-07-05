@@ -5,6 +5,7 @@ public class Functions{
     public static void main(String[]args){
         System.out.println(add(999,20));
         Functions.add(100000,62189);
+        System.out.println(getFirstLetter("Hello"));
     }
     //4
     public static int add(int a, int b){
@@ -13,8 +14,9 @@ public class Functions{
         return sum;
 
     } 
-    public static String getFirstLetter(String a){
-        String output = a.charAt(0);
+    public static char getFirstLetter(String a){
+        char output = a.charAt(0);
+        return output;
 
     }
 }
